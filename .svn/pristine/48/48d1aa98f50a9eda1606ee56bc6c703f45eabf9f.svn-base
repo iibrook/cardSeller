@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/backoffice/backoffice.iml" filepath="$PROJECT_DIR$/backoffice/backoffice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cardSeller.iml" filepath="$PROJECT_DIR$/cardSeller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/dao/dao.iml" filepath="$PROJECT_DIR$/common/dao/dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dbmigration/dbmigration.iml" filepath="$PROJECT_DIR$/dbmigration/dbmigration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/domain/domain.iml" filepath="$PROJECT_DIR$/common/domain/domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/portal/portal.iml" filepath="$PROJECT_DIR$/portal/portal.iml" />
+    </modules>
+  </component>
+</project>
+

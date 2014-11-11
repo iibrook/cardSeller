@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+    <preConditions>
+        <dbms type="postgresql" />
+    </preConditions>
+    <changeSet id="create.sequence" author="minj">
+        <createSequence sequenceName="seq_users" startValue="10000" />
+    </changeSet>
+    <changeSet id="create.table" author="minj">
+        <createTable tableName="users">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="name" type="varchar(128)">
+                <constraints nullable="false" unique="true" />
+            </column>
+            <column name="pwd" type="varchar(128)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="salt" type="varchar(64)"/>
+            <column name="last_login_time" type="timestamp"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="create.index" author="minj">
+        <createIndex tableName="users" indexName="idx_user_name">
+            <column name="name"/>
+        </createIndex>
+    </changeSet>
+    <changeSet id="prod.data" author="minj">
+        <insert tableName="users">
+            <column name="id" value="1"/>
+            <column name="name" value="admin"/>
+            <column name="pwd" value="uQUquPbhSC9jT8fkEoay5+syEA7K64SMiSkDRjYvlJs="/>
+            <column name="salt" value="I4t08LX/VVhogOZoTwGH1g=="/>
+            <column name="last_login_time" value="2014-11-10 15:06:16"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
